@@ -1,0 +1,202 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(139, 0, 0, 0.16);
+}
+
+a {
+  color: inherit;
+}
+
+.ds-page {
+  min-height: 100vh;
+  padding: var(--space-3);
+}
+
+.ds-prose {
+  max-width: var(--content-max);
+}
+
+.ds-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: var(--radius);
+  background: transparent;
+}
+
+.ds-app-name {
+  font-weight: 600;
+}
+
+.ds-topbar-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.ds-progress-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ds-progress-label {
+  font-weight: 600;
+}
+
+.ds-progress-track {
+  width: var(--space-5);
+  height: var(--space-1);
+  border-radius: var(--radius);
+  background: rgba(17, 17, 17, 0.12);
+  overflow: hidden;
+}
+
+.ds-progress-fill {
+  height: 100%;
+  width: var(--progress, 0%);
+  background: var(--color-accent);
+  border-radius: var(--radius);
+}
+
+.ds-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: var(--radius);
+  background: transparent;
+  font-weight: 600;
+}
+
+.ds-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius);
+  background: rgba(17, 17, 17, 0.22);
+}
+
+.ds-status--not-started .ds-status-dot {
+  background: rgba(17, 17, 17, 0.22);
+}
+
+.ds-status--in-progress .ds-status-dot {
+  background: var(--color-warning);
+}
+
+.ds-status--shipped .ds-status-dot {
+  background: var(--color-success);
+}
+
+.ds-context-header {
+  margin-top: var(--space-4);
+  padding: var(--space-2) 0 var(--space-2);
+}
+
+.ds-context-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h1);
+  letter-spacing: -0.01em;
+}
+
+.ds-context-subtitle {
+  margin: var(--space-2) 0 0;
+  max-width: var(--content-max);
+}
+
+.ds-main-grid {
+  margin-top: var(--space-3);
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: var(--space-3);
+}
+
+.ds-primary,
+.ds-secondary {
+  min-width: 0;
+}
+
+.ds-secondary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+@media (max-width: 900px) {
+  .ds-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ds-section-title {
+  margin: 0;
+  font-size: var(--font-size-h2);
+  font-family: var(--font-serif);
+}
+
+.ds-block {
+  padding: var(--space-3);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: var(--radius);
+  background: transparent;
+}
+
+.ds-helper-text {
+  margin: var(--space-2) 0 0;
+  max-width: var(--content-max);
+}
+
+/* Form + motion safety */
+.ds-focusable {
+  transition: border-color 170ms ease-in-out, background-color 170ms ease-in-out, color 170ms ease-in-out, outline-color 170ms
+    ease-in-out, box-shadow 170ms ease-in-out;
+}
+
+.ds-reduce-motion *,
+.ds-reduce-motion *::before,
+.ds-reduce-motion *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-focusable {
+    transition: none !important;
+  }
+}
+

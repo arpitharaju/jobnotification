@@ -1,0 +1,228 @@
+/* Buttons */
+.ds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  background: transparent;
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ds-btn.ds-focusable {
+  transition: background-color 170ms ease-in-out, border-color 170ms ease-in-out, color 170ms ease-in-out, outline-color 170ms
+    ease-in-out;
+}
+
+.ds-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ds-btn--primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-background);
+}
+
+.ds-btn--primary:hover {
+  background: color-mix(in srgb, var(--color-accent) 92%, var(--color-text) 8%);
+}
+
+.ds-btn--secondary {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: transparent;
+}
+
+.ds-btn--secondary:hover {
+  background: rgba(139, 0, 0, 0.08);
+}
+
+.ds-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Cards */
+.ds-card {
+  padding: var(--space-3);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: var(--radius);
+  background: transparent;
+}
+
+/* Inputs */
+.ds-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.ds-label {
+  font-weight: 600;
+}
+
+.ds-input,
+.ds-textarea {
+  width: 100%;
+  padding: var(--space-2);
+  border-radius: var(--radius);
+  border: 1px solid rgba(17, 17, 17, 0.22);
+  background: transparent;
+  color: var(--color-text);
+}
+
+.ds-textarea {
+  min-height: var(--space-5);
+  resize: vertical;
+}
+
+.ds-input:focus-visible,
+.ds-textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.ds-input::placeholder,
+.ds-textarea::placeholder {
+  color: rgba(17, 17, 17, 0.55);
+}
+
+/* Copyable prompt box */
+.ds-copybox {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ds-copybox-inner {
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: var(--radius);
+  background: transparent;
+  padding: var(--space-3);
+}
+
+.ds-copybox-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.ds-copybox-title {
+  font-weight: 600;
+}
+
+.ds-copybox-text {
+  margin: var(--space-2) 0 0;
+  white-space: pre-wrap;
+  max-width: var(--content-max);
+}
+
+/* Alerts (Error) */
+.ds-alert {
+  border-radius: var(--radius);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  padding: var(--space-3);
+}
+
+.ds-alert--error {
+  border-color: var(--color-accent);
+}
+
+.ds-alert-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.ds-alert-body {
+  margin: var(--space-2) 0 0;
+  max-width: var(--content-max);
+}
+
+/* Empty state */
+.ds-empty {
+  padding: var(--space-4);
+  border-radius: var(--radius);
+  border: 1px dashed rgba(17, 17, 17, 0.2);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.ds-empty-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h2);
+}
+
+/* Proof footer checklist */
+.ds-proof {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: var(--radius);
+}
+
+.ds-proof-title {
+  margin: 0 0 var(--space-2);
+  font-weight: 700;
+}
+
+.ds-proof-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.ds-proof-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+}
+
+.ds-proof-check {
+  width: var(--space-3);
+  height: var(--space-3);
+  border-radius: var(--radius);
+  border: 1px solid rgba(17, 17, 17, 0.22);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-proof-item--done .ds-proof-check {
+  border-color: var(--color-success);
+  background: rgba(61, 107, 87, 0.12);
+}
+
+.ds-proof-check svg {
+  width: var(--space-2);
+  height: var(--space-2);
+  display: none;
+}
+
+.ds-proof-item--done .ds-proof-check svg {
+  display: block;
+}
+
+.ds-proof-item--done {
+  color: var(--color-success);
+}
+
+.ds-proof-item--pending {
+  color: var(--color-text);
+  opacity: 0.75;
+  font-weight: 600;
+}
+
