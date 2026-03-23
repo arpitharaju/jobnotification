@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Job Notification App — States</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+  </head>
+  <body>
+    <div class="ds-page">
+      <!-- Top Bar -->
+      <header class="ds-topbar" aria-label="Top bar">
+        <div class="ds-app-name">Job Notification App</div>
+
+        <div class="ds-topbar-center">
+          <div class="ds-progress-row">
+            <div class="ds-progress-label" aria-label="Progress">Step 3/4</div>
+          </div>
+          <div class="ds-progress-track" aria-hidden="true">
+            <div class="ds-progress-fill" style="--progress: 75%"></div>
+          </div>
+        </div>
+
+        <div class="ds-status-badge ds-status--shipped" aria-label="Status badge">
+          <span class="ds-status-dot" aria-hidden="true"></span>
+          Shipped
+        </div>
+      </header>
+
+      <!-- Context Header -->
+      <section class="ds-context-header" aria-label="Context header">
+        <h1 class="ds-context-title">Reliable errors and empty states</h1>
+        <p class="ds-context-subtitle">
+          Clear explanations and next steps. No blame. No blank screens.
+        </p>
+      </section>
+
+      <!-- Primary workspace (70%) + Secondary panel (30%) -->
+      <main class="ds-main-grid" aria-label="Main layout">
+        <section class="ds-primary" aria-label="Primary workspace">
+          <!-- Error state -->
+          <div class="ds-card" style="margin-bottom: 24px">
+            <div class="ds-alert ds-alert--error" role="alert">
+              <p class="ds-alert-title">Could not generate the prompt</p>
+              <p class="ds-alert-body">
+                Confirm that required fields are present, then try again. If the issue persists, check the
+                guidance text and review the entered details.
+              </p>
+            </div>
+          </div>
+
+          <!-- Empty state -->
+          <div class="ds-empty" role="status" aria-label="Empty state">
+            <p class="ds-empty-title">No job preferences yet</p>
+            <p class="ds-helper-text" style="margin-top: 0">
+              Start by entering the minimum details so your next step can be created consistently.
+            </p>
+            <button class="ds-btn ds-focusable ds-btn--primary" type="button">Start setup</button>
+          </div>
+        </section>
+
+        <aside class="ds-secondary" aria-label="Secondary panel">
+          <section class="ds-block" aria-label="Status badge examples">
+            <h2 class="ds-section-title">Status badge</h2>
+            <div style="margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap">
+              <div class="ds-status-badge ds-status--not-started" aria-label="Not Started">
+                <span class="ds-status-dot" aria-hidden="true"></span>
+                Not Started
+              </div>
+              <div class="ds-status-badge ds-status--in-progress" aria-label="In Progress">
+                <span class="ds-status-dot" aria-hidden="true"></span>
+                In Progress
+              </div>
+              <div class="ds-status-badge ds-status--shipped" aria-label="Shipped">
+                <span class="ds-status-dot" aria-hidden="true"></span>
+                Shipped
+              </div>
+            </div>
+          </section>
+        </aside>
+      </main>
+
+      <!-- Proof Footer -->
+      <footer class="ds-proof" aria-label="Proof footer">
+        <div class="ds-proof-title">Proof</div>
+        <ul class="ds-proof-list">
+          <li class="ds-proof-item ds-proof-item--done">
+            <span class="ds-proof-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            UI Built
+          </li>
+          <li class="ds-proof-item ds-proof-item--pending">
+            <span class="ds-proof-check" aria-hidden="true"></span>
+            Logic Working
+          </li>
+          <li class="ds-proof-item ds-proof-item--pending">
+            <span class="ds-proof-check" aria-hidden="true"></span>
+            Test Passed
+          </li>
+          <li class="ds-proof-item ds-proof-item--pending">
+            <span class="ds-proof-check" aria-hidden="true"></span>
+            Deployed
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
+

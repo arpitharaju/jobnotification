@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Job Notification App — Components</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+  </head>
+  <body>
+    <div class="ds-page">
+      <!-- Top Bar -->
+      <header class="ds-topbar" aria-label="Top bar">
+        <div class="ds-app-name">Job Notification App</div>
+
+        <div class="ds-topbar-center">
+          <div class="ds-progress-row">
+            <div class="ds-progress-label" aria-label="Progress">Step 2/4</div>
+          </div>
+          <div class="ds-progress-track" aria-hidden="true">
+            <div class="ds-progress-fill" style="--progress: 50%"></div>
+          </div>
+        </div>
+
+        <div class="ds-status-badge ds-status--in-progress" aria-label="Status badge">
+          <span class="ds-status-dot" aria-hidden="true"></span>
+          In Progress
+        </div>
+      </header>
+
+      <!-- Context Header -->
+      <section class="ds-context-header" aria-label="Context header">
+        <h1 class="ds-context-title">Consistent building blocks</h1>
+        <p class="ds-context-subtitle">
+          Buttons, inputs, cards, and a copyable prompt box with calm, predictable styling.
+        </p>
+      </section>
+
+      <!-- Primary workspace (70%) + Secondary panel (30%) -->
+      <main class="ds-main-grid" aria-label="Main layout">
+        <section class="ds-primary" aria-label="Primary workspace">
+          <div class="ds-card" style="margin-bottom: 24px">
+            <h2 class="ds-section-title">Buttons</h2>
+            <p class="ds-helper-text">Primary is solid deep red; secondary is outlined.</p>
+
+            <div style="margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap">
+              <button class="ds-btn ds-focusable ds-btn--primary" type="button">Primary action</button>
+              <button class="ds-btn ds-focusable ds-btn--secondary" type="button">Secondary action</button>
+            </div>
+          </div>
+
+          <div class="ds-card" style="margin-bottom: 24px">
+            <h2 class="ds-section-title">Inputs</h2>
+            <p class="ds-helper-text">Clean borders with a clear `:focus-visible` ring.</p>
+
+            <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr; gap: 16px">
+              <label class="ds-field" for="demo-input-2">
+                <span class="ds-label">Input</span>
+                <input id="demo-input-2" class="ds-input ds-focusable" placeholder="Type a value" />
+              </label>
+              <label class="ds-field" for="demo-textarea-2">
+                <span class="ds-label">Text area</span>
+                <textarea
+                  id="demo-textarea-2"
+                  class="ds-textarea ds-focusable"
+                  placeholder="Add details"
+                ></textarea>
+              </label>
+            </div>
+          </div>
+
+          <div class="ds-card" style="margin-bottom: 24px">
+            <h2 class="ds-section-title">Cards</h2>
+            <p class="ds-helper-text">Subtle borders, generous padding, no drop shadows.</p>
+          </div>
+        </section>
+
+        <aside class="ds-secondary" aria-label="Secondary panel">
+          <section class="ds-block" aria-label="Copyable prompt box">
+            <div class="ds-copybox">
+              <div class="ds-copybox-head">
+                <div class="ds-copybox-title">Copyable prompt</div>
+                <button class="ds-btn ds-focusable ds-btn--secondary" type="button">Copy</button>
+              </div>
+              <div class="ds-copybox-inner">
+                <div class="ds-copybox-text">
+                  Use a clear prompt format:
+                  <br />- Role focus
+                  <br />- Location preferences
+                  <br />- Experience level
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="ds-block" aria-label="Actions">
+            <div style="display: flex; gap: 16px; flex-wrap: wrap">
+              <button class="ds-btn ds-focusable ds-btn--primary" type="button">Continue</button>
+              <button class="ds-btn ds-focusable ds-btn--secondary" type="button">Review</button>
+            </div>
+          </section>
+        </aside>
+      </main>
+
+      <!-- Proof Footer -->
+      <footer class="ds-proof" aria-label="Proof footer">
+        <div class="ds-proof-title">Proof</div>
+        <ul class="ds-proof-list">
+          <li class="ds-proof-item ds-proof-item--done">
+            <span class="ds-proof-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            UI Built
+          </li>
+          <li class="ds-proof-item ds-proof-item--done">
+            <span class="ds-proof-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            Logic Working
+          </li>
+          <li class="ds-proof-item ds-proof-item--done">
+            <span class="ds-proof-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            Test Passed
+          </li>
+          <li class="ds-proof-item ds-proof-item--pending">
+            <span class="ds-proof-check" aria-hidden="true"></span>
+            Deployed
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
+
