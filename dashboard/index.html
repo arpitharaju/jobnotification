@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard — Job Notification App</title>
+    <title>Dashboard — Job Notification Tracker</title>
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/components.css" />
     <link rel="stylesheet" href="../styles/routes.css" />
@@ -12,13 +12,17 @@
     <div class="route-shell">
       <header class="top-nav" aria-label="Top navigation">
         <div class="top-nav-inner">
-          <div class="ds-app-name">Job Notification App</div>
+          <div class="ds-app-name">Job Notification Tracker</div>
 
-          <nav class="nav-menu" aria-label="Primary links">
+          <nav class="nav-menu" aria-label="Top navigation links">
+            <a class="nav-link" href="../dashboard/" data-route="dashboard">Dashboard</a>
+            <span class="nav-sep" aria-hidden="true">|</span>
             <a class="nav-link" href="../saved/" data-route="saved">Saved</a>
             <span class="nav-sep" aria-hidden="true">|</span>
             <a class="nav-link" href="../digest/" data-route="digest">Digest</a>
+            <span class="nav-sep" aria-hidden="true">|</span>
             <a class="nav-link" href="../settings/" data-route="settings">Settings</a>
+            <span class="nav-sep" aria-hidden="true">|</span>
             <a class="nav-link" href="../proof/" data-route="proof">Proof</a>
           </nav>
 
@@ -26,17 +30,24 @@
         </div>
 
         <div class="nav-panel" data-nav-panel aria-label="Mobile menu">
+          <a class="nav-link" href="../dashboard/" data-route="dashboard">Dashboard</a>
+          <span class="nav-sep" aria-hidden="true">|</span>
           <a class="nav-link" href="../saved/" data-route="saved">Saved</a>
           <span class="nav-sep" aria-hidden="true">|</span>
           <a class="nav-link" href="../digest/" data-route="digest">Digest</a>
+          <span class="nav-sep" aria-hidden="true">|</span>
           <a class="nav-link" href="../settings/" data-route="settings">Settings</a>
+          <span class="nav-sep" aria-hidden="true">|</span>
           <a class="nav-link" href="../proof/" data-route="proof">Proof</a>
         </div>
       </header>
 
-      <main class="route-content" aria-label="Page content">
-        <h1 class="route-title" data-route-title>Dashboard</h1>
-        <p class="route-subtitle" data-route-subtitle>This section will be built in the next step.</p>
+      <main class="route-content" aria-label="Dashboard">
+        <div data-app-view>
+          <div class="route-empty" role="status" aria-label="Dashboard empty state">
+            <h2 class="route-empty-title">No jobs yet. In the next step, you will load a realistic dataset.</h2>
+          </div>
+        </div>
       </main>
     </div>
 

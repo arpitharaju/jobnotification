@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Settings — Job Notification App</title>
+    <title>Settings — Job Notification Tracker</title>
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/components.css" />
     <link rel="stylesheet" href="../styles/routes.css" />
@@ -12,13 +12,17 @@
     <div class="route-shell">
       <header class="top-nav" aria-label="Top navigation">
         <div class="top-nav-inner">
-          <div class="ds-app-name">Job Notification App</div>
+          <div class="ds-app-name">Job Notification Tracker</div>
 
-          <nav class="nav-menu" aria-label="Primary links">
+          <nav class="nav-menu" aria-label="Top navigation links">
+            <a class="nav-link" href="../dashboard/" data-route="dashboard">Dashboard</a>
+            <span class="nav-sep" aria-hidden="true">|</span>
             <a class="nav-link" href="../saved/" data-route="saved">Saved</a>
             <span class="nav-sep" aria-hidden="true">|</span>
             <a class="nav-link" href="../digest/" data-route="digest">Digest</a>
+            <span class="nav-sep" aria-hidden="true">|</span>
             <a class="nav-link" href="../settings/" data-route="settings">Settings</a>
+            <span class="nav-sep" aria-hidden="true">|</span>
             <a class="nav-link" href="../proof/" data-route="proof">Proof</a>
           </nav>
 
@@ -26,17 +30,53 @@
         </div>
 
         <div class="nav-panel" data-nav-panel aria-label="Mobile menu">
+          <a class="nav-link" href="../dashboard/" data-route="dashboard">Dashboard</a>
+          <span class="nav-sep" aria-hidden="true">|</span>
           <a class="nav-link" href="../saved/" data-route="saved">Saved</a>
           <span class="nav-sep" aria-hidden="true">|</span>
           <a class="nav-link" href="../digest/" data-route="digest">Digest</a>
+          <span class="nav-sep" aria-hidden="true">|</span>
           <a class="nav-link" href="../settings/" data-route="settings">Settings</a>
+          <span class="nav-sep" aria-hidden="true">|</span>
           <a class="nav-link" href="../proof/" data-route="proof">Proof</a>
         </div>
       </header>
 
-      <main class="route-content" aria-label="Page content">
-        <h1 class="route-title" data-route-title>Settings</h1>
-        <p class="route-subtitle" data-route-subtitle>This section will be built in the next step.</p>
+      <main class="route-content" aria-label="Settings">
+        <div data-app-view>
+          <div class="ds-card" aria-label="Settings placeholder">
+            <h1 class="route-title">Settings</h1>
+            <div class="route-form">
+              <label class="ds-field" for="role-keywords">
+                <span class="ds-label">Role keywords</span>
+                <input id="role-keywords" class="ds-input ds-focusable" placeholder="e.g., frontend engineer, product manager" />
+              </label>
+
+              <label class="ds-field" for="preferred-locations">
+                <span class="ds-label">Preferred locations</span>
+                <input
+                  id="preferred-locations"
+                  class="ds-input ds-focusable"
+                  placeholder="e.g., Remote, New York, London"
+                />
+              </label>
+
+              <label class="ds-field" for="mode">
+                <span class="ds-label">Mode</span>
+                <select id="mode" class="ds-input ds-focusable" aria-label="Mode">
+                  <option value="remote">Remote</option>
+                  <option value="hybrid">Hybrid</option>
+                  <option value="onsite">Onsite</option>
+                </select>
+              </label>
+
+              <label class="ds-field" for="experience-level">
+                <span class="ds-label">Experience level</span>
+                <input id="experience-level" class="ds-input ds-focusable" placeholder="e.g., 3-5 years" />
+              </label>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 
